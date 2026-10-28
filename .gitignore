@@ -1,0 +1,10 @@
+build/
+__pycache__/
+*.pyc
+*.so
+data/
+*.db
+*.sqlite3*
+*.log
+.env
+.env.*

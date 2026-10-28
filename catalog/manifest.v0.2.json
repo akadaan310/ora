@@ -1,0 +1,15 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"ora.manifest/0.2",
+ "title":"ORA Public Manifest 0.2",
+ "type":"object",
+ "required":["schema","id","name","status","capability_contracts","continuity"],
+ "properties":{
+  "schema":{"const":"ora.public-manifest/0.2"},
+  "id":{"type":"string","pattern":"^ora-[a-z0-9-]{4,72}$"},
+  "name":{"type":"string"},
+  "status":{"enum":["PROPOSED","READY","RUNNING","PAUSED","STOPPED"]},
+  "capability_contracts":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+  "continuity":{"type":"string"}
+ },"additionalProperties":true
+}

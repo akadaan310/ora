@@ -1,0 +1,21 @@
+# Example only — do not install without verifying the Oracle VM user's paths.
+[Unit]
+Description=ORA Engine Local Listener
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/ORA
+ExecStart=%h/ORA/scripts/run_local.sh
+Environment=ORA_HOST=127.0.0.1
+Environment=ORA_PORT=8767
+Environment=ORA_DB=%h/.local/share/ora/ora.sqlite3
+Environment=ORA_SPACE_WEB_DIR=%h/ORASPACE/web
+Restart=on-failure
+RestartSec=4
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+
+[Install]
+WantedBy=default.target

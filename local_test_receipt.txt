@@ -1,0 +1,28 @@
+g++ -std=c++20 -O2 -Wall -Wextra -Werror -fPIC -Iinclude tests/tower_test.cpp -Lbuild -lora -Wl,-rpath,'$ORIGIN' -o build/tower-test
+./build/tower-test
+PASS C++: 12 tower levels, Unicode registry, AST, simultaneous FSM, conflict, capability admission, deterministic scene, C ABI
+test_create_and_persistence (test_engine.EngineTests.test_create_and_persistence) ... ok
+test_delegation_attenuation (test_engine.EngineTests.test_delegation_attenuation) ... ok
+test_grammar_is_only_proposal (test_engine.EngineTests.test_grammar_is_only_proposal) ... ok
+test_idempotency (test_engine.EngineTests.test_idempotency) ... ok
+test_ledger_integrity_and_tamper (test_engine.EngineTests.test_ledger_integrity_and_tamper) ... ok
+test_listener_proposes_child (test_engine.EngineTests.test_listener_proposes_child) ... ok
+test_missing_capability_denied (test_engine.EngineTests.test_missing_capability_denied) ... ok
+test_parallel_regions (test_engine.EngineTests.test_parallel_regions) ... ok
+test_scene_determinism (test_engine.EngineTests.test_scene_determinism) ... ok
+test_source_parsers (test_engine.EngineTests.test_source_parsers) ... ok
+test_supported_missions (test_engine.EngineTests.test_supported_missions) ... ok
+test_tower_and_sovereign (test_engine.EngineTests.test_tower_and_sovereign) ... ok
+test_unmapped_does_not_fake_capability (test_engine.EngineTests.test_unmapped_does_not_fake_capability) ... ok
+test_url_preview_pure (test_engine.EngineTests.test_url_preview_pure) ... ok
+test_version_and_invalid_transition (test_engine.EngineTests.test_version_and_invalid_transition) ... ok
+test_worker_async (test_engine.EngineTests.test_worker_async) ... ok
+test_auth (test_http.HTTPTests.test_auth) ... ok
+test_create_and_mission_http (test_http.HTTPTests.test_create_and_mission_http) ... ok
+test_health_manifest (test_http.HTTPTests.test_health_manifest) ... ok
+test_site (test_http.HTTPTests.test_site) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 3.136s
+
+OK

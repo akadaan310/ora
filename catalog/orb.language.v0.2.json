@@ -1,0 +1,12 @@
+{
+  "schema":"ora.orb/0.2",
+  "id":"orb:language-inspection",
+  "version":"0.2.0",
+  "level":"ORB",
+  "oracle":"language",
+  "capabilities":["language.inspect","article.structure"],
+  "grammar_profiles":["language.inspect/0.2","article.structure/0.2"],
+  "execution":{"runtime":"ora-engine-python","requires_llm":false,"network":false,"side_effects":[]},
+  "evidence":{"tests":["test_source_parsers","test_supported_missions"],"admission":"TESTED_LOCAL_REFERENCE"},
+  "limits":["Language morphology/translation not implemented","Wikipedia text must be supplied by caller","No fact validation"]
+}

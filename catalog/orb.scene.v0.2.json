@@ -1,0 +1,12 @@
+{
+  "schema":"ora.orb/0.2",
+  "id":"orb:procedural-stars",
+  "version":"0.2.0",
+  "level":"ORB",
+  "oracle":"surface",
+  "capabilities":["scene.generate"],
+  "grammar_profiles":["surface.stars/0.1"],
+  "execution":{"runtime":"libora.so C ABI or explicit Python fallback","requires_llm":false,"network":false,"side_effects":[]},
+  "evidence":{"tests":["test_scene_determinism","tower_test.cpp"],"admission":"TESTED_LOCAL_REFERENCE"},
+  "limits":["Star particles are not Gaia measurements","Scene descriptor is not a rendered 3D game","Cross-platform float reproducibility not established"]
+}
