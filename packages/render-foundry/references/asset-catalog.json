@@ -1,0 +1,128 @@
+{
+  "schema": "ora.render-foundry.asset-catalog/0.1",
+  "curated_utc": "2026-10-28",
+  "purpose": "Non-downloaded, manually curated external assets for ORA Space and HOMELESS. Each source is an option, not content already installed or permission for unrestricted redistribution.",
+  "media_policy": "Pin asset file, license, source version and SHA-256 before copying into shipped packages; prefer CC0 for redistribution. Third-party licenses require separate compliance review.",
+  "sources": [
+    {
+      "id": "golden_bay",
+      "name": "Poly Haven Golden Bay",
+      "type": "cc0_hdri",
+      "url": "https://polyhaven.com/a/golden_bay",
+      "rights": "CC0",
+      "proposed_use": "Warm dusk waterfront illumination and golden reflections",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "small_harbour_sunset",
+      "name": "Poly Haven Small Harbour Sunset",
+      "type": "cc0_hdri",
+      "url": "https://polyhaven.com/a/small_harbour_sunset",
+      "rights": "CC0",
+      "proposed_use": "Harbor golden hour reflections and orbital glass IBL",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "modern_buildings_night",
+      "name": "Poly Haven Modern Buildings Night",
+      "type": "cc0_hdri",
+      "url": "https://polyhaven.com/a/modern_buildings_night",
+      "rights": "CC0",
+      "proposed_use": "Night riverside glass architecture and reflection environment",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "shanghai_riverside",
+      "name": "Poly Haven Shanghai Riverside",
+      "type": "cc0_hdri",
+      "url": "https://polyhaven.com/a/shanghai_riverside",
+      "rights": "CC0",
+      "proposed_use": "Riverside panorama, urban skyline and surface context",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "qwantani_sunset_puresky",
+      "name": "Poly Haven Qwantani Sunset Pure Sky",
+      "type": "cc0_hdri",
+      "url": "https://polyhaven.com/a/qwantani_sunset_puresky",
+      "rights": "CC0",
+      "proposed_use": "Pure atmospheric sky for creative scene composite",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "ocean_sunset_loop",
+      "name": "Pixabay Seamless Ocean Sunset 4K",
+      "type": "pre_rendered_video",
+      "url": "https://pixabay.com/videos/ocean-water-sunset-loop-seamless-344595/",
+      "rights": "Pixabay Content License",
+      "proposed_use": "Already-rendered 4K ocean motion; confirm media-specific rights",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "waterfront_sunset_pexels",
+      "name": "Pexels Serene Waterfront Sunset 4K",
+      "type": "pre_rendered_video",
+      "url": "https://www.pexels.com/video/serene-waterfront-at-sunset-with-city-skyline-31295812/",
+      "rights": "Pexels License",
+      "proposed_use": "Already-rendered city-and-water plate, not independent object layers",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "glass_sphere_pexels",
+      "name": "Pexels Glowing Sphere Loop",
+      "type": "pre_rendered_video",
+      "url": "https://www.pexels.com/video/elegant-looping-abstract-animation-of-glowing-sphere-36276722/",
+      "rights": "Pexels License",
+      "proposed_use": "Already-rendered sphere animation; background may require keying",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "glass_water_pixabay",
+      "name": "Pixabay Sea Glass Sphere Loop",
+      "type": "pre_rendered_video",
+      "url": "https://pixabay.com/videos/sea-glass-glass-ball-coast-summer-348348/",
+      "rights": "Pixabay Content License",
+      "proposed_use": "Glass orb with ocean refraction, not layered optical render passes",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "magic_crystal_ball_blendkit",
+      "name": "Blendkit Magic Crystal Ball Glass Shader",
+      "type": "blender_material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/c37e5c18-6815-4b95-ba84-7ae505550160/",
+      "rights": "Blendkit Royalty Free",
+      "proposed_use": "Ready-to-render PBR optical material; not a ready-coded ORA orb",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "water_shader_blendkit",
+      "name": "Blendkit Water Ocean Volume With Ripples",
+      "type": "blender_material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/872bb6e6-ef88-45fb-afb5-38ea66d8d9b1/",
+      "rights": "Blendkit Royalty Free",
+      "proposed_use": "Ready-to-render water shader; Blender-specific",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    },
+    {
+      "id": "animated_orb_blendkit",
+      "name": "Blendkit Magical Orb",
+      "type": "animated_blender_model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2aced65a-87b9-475f-ab2f-73436cabaeff/",
+      "rights": "Blendkit Royalty Free",
+      "proposed_use": "Animated glowing orb model in Blender Cycles, source requires review",
+      "asset_downloaded": false,
+      "validated_in_game": false
+    }
+  ]
+}
