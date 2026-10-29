@@ -3,7 +3,7 @@
 set -eu
 
 if [ "${1:-}" = "--help" ]; then
-  printf '%s\\n' 'ORA Space v0.5: curl installer for Termux' '  sh installer.sh [--install-only]' '  Starts locally at http://127.0.0.1:8767' 
+  printf '%s\\n' 'ORA Space v0.6: cosmos-only ORA installer for Termux' '  sh installer.sh [--install-only]' '  Starts locally at http://127.0.0.1:8767' 
   exit 0
 fi
 case "${1:-}" in ""|--install-only) ;; *) echo 'Invalid option' >&2; exit 2;; esac
@@ -27,9 +27,9 @@ from urllib.request import Request, urlopen
 import io, os, shutil, subprocess, sys, json, tempfile
 
 ORA_REV = '9995989149e8194f4cd699f902c3a6a565fda216'
-SITE_REV = 'a04f405de048226e1249bc293a628e06b0e123f8'
+SITE_REV = 'e8a63eb93c1b7e9a4a7837e23c9a199ff5048c99'
 # Every shipped source and decoded WebP is verified against the original built package.
-EXPECTED = {'web/app.js': 'd6068ae00b729b4673132f3b97aee249d6b6471d83e8454435dc855bc5f04c25', 'web/assets/city-left.webp': 'ae7329152024b32a487b8f73c653d9247a6425d8b185890a1e1bb9333474baaa', 'web/assets/city-right.webp': 'dc145d4eb4bed1cfd02f72090d0bb7fbe53cd8dd67c09324d2ead426c5ad8ba9', 'web/assets/cosmos-texture.webp': '330c99468267e6762b5e6088ac32acc0c1af3cff9d6020ecd4a1c38f362e434d', 'web/assets/milkyway.webp': '86e75132ad94ab756da7edfb35dd6d454973309c0c2f42cf280d4fb9e2a4f637', 'web/assets/mobile-world.webp': 'a8e935b829d8f3336b16d8f5893299843bb4a8d98eff5d0534d7c17f8d025395', 'web/assets/orb-center.webp': 'eaa5d8cc3cc858e268679310e34cfd9b2e17a6796877466906d6d557d120cce3', 'web/assets/shore-world.webp': '6b49ada69b0f843c7ab5807a88b899079813a91fb6546d0d21f3c0582233469b', 'web/assets/water-source.webp': 'fa4485e892bcfa0e01d87f4e47c1d13929b785474c80395997c90bde046e47d7', 'web/gpu-water.js': '54cf48c2bce815e1ac376e42374fce8e22d252844503284e87318ee6330a3c0b', 'web/index.html': 'f88f74fa6373a357bab8c8c17b01efb7243ba23858792e55e9d8431bc277e52a', 'web/space-sky.js': 'c4888afc26224f0ff4301ea73754f79bbc6cafab9fafe674cb4d03bb098776bf', 'web/style.css': 'd61798db4d6554f984a0d74521970ccaa7f1eb6485711e030166a5060766ea82', 'engine-overlays/service/ora360.py': '15dc812b7246824909360e239afffa0ae44215766e79e83c622f08c35d98a65c', 'engine-overlays/service/oraspace360.py': 'a0f8e5da6b5a930b95ffd46c173f8c7df442e05cef0da2aa5908b009b46d0414'}
+EXPECTED = {'web/index.html': '5b47bb618236ee2e5f4bf68fd2aa4460917ad5a6fbb2b902a90d17f8b801f4dd', 'engine-overlays/service/ora360.py': 'e804aaf9b27afa1905893aa4b027b44a2b225bb2c0efec8f7619a205b5d5d960', 'engine-overlays/service/oraspace360.py': 'a0f8e5da6b5a930b95ffd46c173f8c7df442e05cef0da2aa5908b009b46d0414'}
 ROOT = Path.home()/'.local'/'share'/'ora-space'
 RELEASE = ROOT/'releases'/SITE_REV[:12]
 ACTIVE = ROOT/'current'
@@ -82,7 +82,7 @@ def install():
             found=set()
             for member,pos in safe_zip_members(z):
                 parts=pos.parts
-                if len(parts)<5 or parts[1:3]!=('packages','celestial-preview'):
+                if len(parts)<5 or parts[1:3]!=('packages','ora-cosmos'):
                     continue
                 logical=PurePosixPath(*parts[3:])
                 # *.b64 is an intentionally encoded binary WebP distributed through GitHub's text API.
