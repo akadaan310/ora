@@ -3,7 +3,7 @@
 set -eu
 
 if [ "${1:-}" = "--help" ]; then
-  printf '%s\\n' 'ORA Space v0.6: cosmos-only ORA installer for Termux' '  sh installer.sh [--install-only]' '  Starts locally at http://127.0.0.1:8767' 
+  printf '%s\\n' 'ORA Space v0.6.1: cosmos-only ORA installer for Termux' '  sh installer.sh [--install-only]' '  Starts locally at http://127.0.0.1:8767' 
   exit 0
 fi
 case "${1:-}" in ""|--install-only) ;; *) echo 'Invalid option' >&2; exit 2;; esac
@@ -28,8 +28,9 @@ import io, os, shutil, subprocess, sys, json, tempfile
 
 ORA_REV = '9995989149e8194f4cd699f902c3a6a565fda216'
 SITE_REV = '1efe77a4f5c7ed0563c51406f117d25143e2ac08'
-# Every shipped source and decoded WebP is verified against the original built package.
-EXPECTED = {'web/index.html': '6daf2c26894e7913935670b71974ccd9952921fc655317534d8093bb959d99c2', 'engine-overlays/service/ora360.py': 'e804aaf9b27afa1905893aa4b027b44a2b225bb2c0efec8f7619a205b5d5d960', 'engine-overlays/service/oraspace360.py': 'a0f8e5da6b5a930b95ffd46c173f8c7df442e05cef0da2aa5908b009b46d0414'}
+# Hashes verified against the three source files at SITE_REV (2026-10-29).
+# Any mismatch fails closed; existing data and prior active release remain untouched.
+EXPECTED = {'web/index.html': '8e382a65357c11496a7a71e6bcd8ad12d71020f0599d64b1737f8ebe2113976f', 'engine-overlays/service/ora360.py': '15dc812b7246824909360e239afffa0ae44215766e79e83c622f08c35d98a65c', 'engine-overlays/service/oraspace360.py': 'a0f8e5da6b5a930b95ffd46c173f8c7df442e05cef0da2aa5908b009b46d0414'}
 ROOT = Path.home()/'.local'/'share'/'ora-space'
 RELEASE = ROOT/'releases'/SITE_REV[:12]
 ACTIVE = ROOT/'current'
@@ -77,7 +78,7 @@ def install():
                 dest.parent.mkdir(parents=True,exist_ok=True)
                 dest.write_bytes(z.read(member))
             if not found:raise RuntimeError('Expected ORA engine missing')
-        print('Downloading ORASPACE cinematic assets and ORA 360 module...')
+        print('Downloading ORASPACE computational cosmos and ORA 360 module...')
         with fetch('ORASPACE',SITE_REV) as z:
             found=set()
             for member,pos in safe_zip_members(z):
