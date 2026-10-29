@@ -1,0 +1,16 @@
+{
+ "schema":"glass.render-foundry/0.1",
+ "cell_id":"homeless.waterfront.001",
+ "seed":41729,
+ "renderer":"bake-l40s",
+ "instances":[
+  {"id":"block-a","kind":"building","position":[-12,7,0],"scale":[8,16,8]},
+  {"id":"block-b","kind":"building","position":[-2,11,0],"scale":[6,22,6]},
+  {"id":"block-c","kind":"building","position":[10,9,0],"scale":[8,18,9]},
+  {"id":"road-a","kind":"road","position":[0,0,0],"scale":[34,0.15,6]},
+  {"id":"water-a","kind":"water","position":[0,-8,0],"scale":[60,0.1,15]},
+  {"id":"plaza-a","kind":"plaza","position":[18,0,0],"scale":[9,0.2,12]},
+  {"id":"lamp-a","kind":"lamp","position":[-8,-1,3],"scale":[0.3,6,0.3]},
+  {"id":"lamp-b","kind":"lamp","position":[12,-1,3],"scale":[0.3,6,0.3]}
+ ]
+}
