@@ -27,9 +27,9 @@ from urllib.request import Request, urlopen
 import io, os, shutil, subprocess, sys, json, tempfile
 
 ORA_REV = '9995989149e8194f4cd699f902c3a6a565fda216'
-SITE_REV = '3d48fda9131f29bc3466d5017cfee300dde7cc97'
+SITE_REV = '1efe77a4f5c7ed0563c51406f117d25143e2ac08'
 # Every shipped source and decoded WebP is verified against the original built package.
-EXPECTED = {'web/index.html': '900bc8e775e7ec55746a6bb21c8130dd790a58224043435796d385d5dd222199', 'engine-overlays/service/ora360.py': 'e804aaf9b27afa1905893aa4b027b44a2b225bb2c0efec8f7619a205b5d5d960', 'engine-overlays/service/oraspace360.py': 'a0f8e5da6b5a930b95ffd46c173f8c7df442e05cef0da2aa5908b009b46d0414'}
+EXPECTED = {'web/index.html': '6daf2c26894e7913935670b71974ccd9952921fc655317534d8093bb959d99c2', 'engine-overlays/service/ora360.py': 'e804aaf9b27afa1905893aa4b027b44a2b225bb2c0efec8f7619a205b5d5d960', 'engine-overlays/service/oraspace360.py': 'a0f8e5da6b5a930b95ffd46c173f8c7df442e05cef0da2aa5908b009b46d0414'}
 ROOT = Path.home()/'.local'/'share'/'ora-space'
 RELEASE = ROOT/'releases'/SITE_REV[:12]
 ACTIVE = ROOT/'current'
